@@ -1,7 +1,6 @@
 FROM node:18-alpine 
 
-LABEL maintainer="vincent <alfa.king+git@gmail.com>"
-LABEL description="nodejs 18 alpine"
+LABEL maintainer="Vincent <alfa.king@gmail.com>"
 
 RUN  apk update && \ 
 	apk add --no-cache openssh tzdata zsh git curl && \ 

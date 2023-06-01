@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/vincent/Work/WaferGitLab/Virsical/visualization'
+let g:netrw_dirhist_5='/Users/vincent/Work/project/monitoring/config'
+let g:netrw_dirhist_4='/Users/vincent/Applications'
+let g:netrw_dirhist_3='/Users/vincent/.mume'
+let g:netrw_dirhist_2='/Users/vincent/Library/WebKit'
+let g:netrw_dirhist_1='/Users/vincent/.npm/_locks'

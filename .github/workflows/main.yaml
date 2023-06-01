@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_NAME: "vincentking/18-alpine"
+  DOCKER_NAME: "vincentking/node"
 
 jobs:
   push_to_registry:

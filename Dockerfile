@@ -3,7 +3,7 @@ FROM node:18-alpine
 LABEL maintainer="Vincent <alfa.king@gmail.com>"
 
 RUN  apk update && \ 
-	apk add --no-cache openssh tzdata zsh git curl && \ 
+	apk add --no-cache openssh tzdata zsh git curl vim && \ 
 	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 	sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && \
 	ssh-keygen -t dsa -P "" -f /etc/ssh/ssh_host_dsa_key && \

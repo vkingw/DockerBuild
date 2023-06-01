@@ -13,7 +13,7 @@ RUN  apk update && \
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
 	echo "root:admin" | chpasswd && \
         sed -i 's/ash/zsh/g' /etc/passwd && \
-	pwd
+	ls -a /root
 
 # 开放22端口
 EXPOSE 22

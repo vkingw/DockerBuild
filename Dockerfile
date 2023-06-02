@@ -7,8 +7,10 @@ RUN apt update && \
 	apt -y -q install git && \
 	apt -y -q install curl && \
 	apt -y -q install zsh && \
-	apt -y -q install openssh-server && \ 
-	cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+	apt -y -q install openssh-server && \
+# 	apt -y -q install openssh-server && \
+	echo "Asia/Shanghai" > /etc/timezone && \
+    	dpkg-reconfigure -f noninteractive tzdata && \
 	sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && \
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
 	echo "root:admin" | chpasswd && \

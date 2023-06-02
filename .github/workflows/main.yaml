@@ -3,14 +3,13 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - master
+      - node-18.16.0-bullseye
   release:
     types: [published]
   workflow_dispatch:
 
 env:
   DOCKER_NAME: "vincentking/node"
-  VERSION: "bullseye:
 
 jobs:
   push_to_registry:
@@ -20,8 +19,8 @@ jobs:
     steps:
       - name: get_image_name
         run: |
+          VERSION=bullseye
 
-          repository=${{ github.repository }}
           IMAGE_NAME=${{ env.DOCKER_NAME }}:$VERSION
 
           echo IMAGE_NAME=$IMAGE_NAME

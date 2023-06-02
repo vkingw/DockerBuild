@@ -12,7 +12,7 @@ RUN apt update && \
 	sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config && \
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
 	echo "root:admin" | chpasswd && \
-	sed -i 's/ash/zsh/g' /etc/passwd && \
+	sed -i 's/bash/zsh/g' /etc/passwd && \
 	cd /root && \
 	mkdir .ssh && \
 	mkdir app && \

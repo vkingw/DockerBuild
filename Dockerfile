@@ -1,4 +1,4 @@
-FROM node:18.17.1-bullseye
+FROM node:18.18.0-bullseye
 
 LABEL maintainer="Vincent <alfa.king@gmail.com>"
 

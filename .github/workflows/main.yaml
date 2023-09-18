@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: get_image_name
         run: |
-          VERSION=bullseye
+          VERSION=latest
 
           IMAGE_NAME=${{ env.DOCKER_NAME }}:$VERSION
 

@@ -3,7 +3,7 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - node-18.17.1-bullseye
+      - node-18.18.0-bullseye
   release:
     types: [published]
   workflow_dispatch:

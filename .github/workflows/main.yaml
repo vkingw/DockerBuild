@@ -19,12 +19,8 @@ jobs:
     steps:
       - name: get_image_name
         run: |
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+          VERSION=latest
 
-          # Use Docker `latest` tag convention
-          [ "$VERSION" == "main" ] && VERSION=latest
-
-          repository=${{ github.repository }}
           IMAGE_NAME=${{ env.DOCKER_NAME }}:$VERSION
 
           echo IMAGE_NAME=$IMAGE_NAME

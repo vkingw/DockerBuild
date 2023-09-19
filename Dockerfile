@@ -1,4 +1,4 @@
-FROM node:18-alpine 
+FROM node:20.6.1-bullseye
 
 LABEL maintainer="Vincent <alfa.king@gmail.com>"
 
@@ -12,7 +12,7 @@ RUN  apk update && \
 	ssh-keygen -t ed25519 -P "" -f /etc/ssh/ssh_host_ed25519_key && \
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
 	echo "root:admin" | chpasswd && \
-        sed -i 's/ash/zsh/g' /etc/passwd && \
+	sed -i 's/ash/zsh/g' /etc/passwd && \
 	cd /root && \
 	mkdir .ssh && \
 	cd .ssh && \

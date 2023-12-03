@@ -12,7 +12,7 @@ RUN apk update && \
     rm -rf /var/cache/apk/*
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
-	sed -i 's/bash/zsh/g' /etc/passwd && \
+	sed -i 's/ash/zsh/g' /etc/passwd && \
 	cd /root && \
 	mkdir -p /run/sshd && \
 	cd .ssh && \

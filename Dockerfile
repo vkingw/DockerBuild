@@ -7,7 +7,7 @@ RUN apk update && \
 	mkdir -p /start-script && \
     mkdir -p /root/app && \
     mkdir -p /root/.ssh && \
-	apk add --no-cache --update vim git openssh curl procps && \
+	apk add --no-cache --update vim git openssh curl procps tzdata && \
 	echo "root:root" | chpasswd && \
     rm -rf /var/cache/apk/*
 
@@ -29,6 +29,8 @@ RUN	ssh-keygen -t ed25519 -P "" -f /etc/ssh/ssh_host_ed25519_key
 ADD .vimrc /root/.vimrc
 ADD .viminfo /root/.viminfo
 ADD .vim /root/.vim
+
+ENV TZ=Asia/Taipei
 
 # 开放22端口
 EXPOSE 22

@@ -1,4 +1,5 @@
-FROM node:20.10.0-alpine3.18
+#FROM node:20.10.0-alpine3.18
+FROM 21.7.1-alpine3.19
 
 LABEL maintainer="Vincent <alfa.king@gmail.com>"
 
@@ -7,7 +8,7 @@ RUN apk update && \
 	mkdir -p /start-script && \
     mkdir -p /root/app && \
     mkdir -p /root/.ssh && \
-	apk add --no-cache --update vim git openssh curl procps tzdata && \
+	apk add --no-cache --update vim git openssh curl procps tzdata bash && \
 	echo "root:root" | chpasswd && \
     rm -rf /var/cache/apk/*
 

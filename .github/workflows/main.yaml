@@ -3,7 +3,7 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - alpine3.19
+      - alpine3.18
   release:
     types: [published]
   workflow_dispatch:

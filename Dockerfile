@@ -32,7 +32,7 @@ ADD .viminfo /root/.viminfo
 ADD .vim /root/.vim
 
 # 拷贝脚本到容器中
-COPY start.sh /usr/local/bin/start.sh
+ADD start.sh /usr/local/bin/start.sh
 
 # 确保脚本可执行
 RUN chmod +x /usr/local/bin/start.sh

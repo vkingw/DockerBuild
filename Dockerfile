@@ -31,10 +31,17 @@ ADD .vimrc /root/.vimrc
 ADD .viminfo /root/.viminfo
 ADD .vim /root/.vim
 
+# 拷贝脚本到容器中
+COPY start.sh /usr/local/bin/start.sh
+
+# 确保脚本可执行
+RUN chmod +x /usr/local/bin/start.sh
+
 ENV TZ=Asia/Taipei
 
 # 开放22端口
 EXPOSE 22
 
 # 执行ssh启动命令
-CMD ["/usr/sbin/sshd", "-D"]
+# CMD ["/usr/sbin/sshd", "-D"]
+CMD ["/usr/local/bin/start.sh"]
